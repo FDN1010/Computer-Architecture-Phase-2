@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+mkdir -p /autograder/source/assembler_files
+mkdir -p /autograder/results
+
+cp /autograder/submission/* /autograder/source/assembler_files/
+
+
+if [ -f /autograder/source/assembler_files/assembler.cpp ]; then
+    g++ -std=c++17 -o /autograder/source/assembler_files/assembler /autograder/source/assembler_files/assembler.cpp
+    /autograder/source/assembler_files/assembler /autograder/source/assembler_files/ /autograder/source/add_shift.s
+    /autograder/source/assembler_files/assembler /autograder/source/assembler_files/ /autograder/source/test.s
+elif [ -f /autograder/source/assembler_files/assembler.py ]; then
+    python3 /autograder/source/assembler_files/assembler.py /autograder/source/assembler_files/ /autograder/source/add_shift.s
+    python3 /autograder/source/assembler_files/assembler.py /autograder/source/assembler_files/ /autograder/source/test.s
+else
+    echo "Error: No assembler found (.cpp or .py)"
+    exit 1
+fi
+
+python3 /autograder/source/results.py
