@@ -1,0 +1,20 @@
+{
+    "score": 0.0,
+    "output": "Phase 2 Autograder",
+    "tests": [
+        {
+            "name": "add_shift",
+            "score": 0.0,
+            "max_score": 1.5,
+            "output": "Binary: FAIL; Hex: FAIL; Data Binary: FAIL; Data Hex: FAIL; Instruction Addresses: FAIL; Data Addresses: FAIL\n\nGenerated:\nFile not found\n\nExpected:\nFile not found",
+            "visibility": "visible"
+        },
+        {
+            "name": "test",
+            "score": 0.0,
+            "max_score": 1.5,
+            "output": "Binary: FAIL; Hex: FAIL; Data Binary: FAIL; Data Hex: FAIL; Instruction Addresses: FAIL; Data Addresses: FAIL\n\nGenerated:\nFile not found\n\nExpected:\nFile not found",
+            "visibility": "visible"
+        }
+    ]
+}
