@@ -1,0 +1,172 @@
+# R-type instructions
+add:
+  type: R
+  opcode: "0110011"
+  funct3: "000"
+  funct7: "0000000"
+sub:
+  type: R
+  opcode: "0110011"
+  funct3: "000"
+  funct7: "0100000"
+sll:
+  type: R
+  opcode: "0110011"
+  funct3: "001"
+  funct7: "0000000"
+slt:
+  type: R
+  opcode: "0110011"
+  funct3: "010"
+  funct7: "0000000"
+sltu:
+  type: R
+  opcode: "0110011"
+  funct3: "011"
+  funct7: "0000000"
+xor:
+  type: R
+  opcode: "0110011"
+  funct3: "100"
+  funct7: "0000000"
+srl:
+  type: R
+  opcode: "0110011"
+  funct3: "101"
+  funct7: "0000000"
+sra:
+  type: R
+  opcode: "0110011"
+  funct3: "101"
+  funct7: "0100000"
+or:
+  type: R
+  opcode: "0110011"
+  funct3: "110"
+  funct7: "0000000"
+and:
+  type: R
+  opcode: "0110011"
+  funct3: "111"
+  funct7: "0000000"
+
+# I-type instructions (arithmetic/logical)
+addi:
+  type: I
+  opcode: "0010011"
+  funct3: "000"
+slti:
+  type: I
+  opcode: "0010011"
+  funct3: "010"
+sltiu:
+  type: I
+  opcode: "0010011"
+  funct3: "011"
+xori:
+  type: I
+  opcode: "0010011"
+  funct3: "100"
+ori:
+  type: I
+  opcode: "0010011"
+  funct3: "110"
+andi:
+  type: I
+  opcode: "0010011"
+  funct3: "111"
+slli:
+  type: I
+  opcode: "0010011"
+  funct3: "001"
+  funct7: "0000000"
+srli:
+  type: I
+  opcode: "0010011"
+  funct3: "101"
+  funct7: "0000000"
+srai:
+  type: I
+  opcode: "0010011"
+  funct3: "101"
+  funct7: "0100000"
+
+# I-type instructions (load)
+lw:
+  type: I
+  opcode: "0000011"
+  funct3: "010"
+lh:
+  type: I
+  opcode: "0000011"
+  funct3: "001"
+lb:
+  type: I
+  opcode: "0000011"
+  funct3: "000"
+lhu:
+  type: I
+  opcode: "0000011"
+  funct3: "101"
+lbu:
+  type: I
+  opcode: "0000011"
+  funct3: "100"
+
+# I-type instructions (fence/system)
+jalr:
+  type: I
+  opcode: "1100111"
+
+# S-type instructions
+sw:
+  type: S
+  opcode: "0100011"
+  funct3: "010"
+sh:
+  type: S
+  opcode: "0100011"
+  funct3: "001"
+sb:
+  type: S
+  opcode: "0100011"
+  funct3: "000"
+
+# B-type instructions
+beq:
+  type: B
+  opcode: "1100011"
+  funct3: "000"
+bne:
+  type: B
+  opcode: "1100011"
+  funct3: "001"
+blt:
+  type: B
+  opcode: "1100011"
+  funct3: "100"
+bge:
+  type: B
+  opcode: "1100011"
+  funct3: "101"
+bltu:
+  type: B
+  opcode: "1100011"
+  funct3: "110"
+bgeu:
+  type: B
+  opcode: "1100011"
+  funct3: "111"
+
+# U-type instructions
+lui:
+  type: U
+  opcode: "0110111"
+auipc:
+  type: U
+  opcode: "0010111"
+
+# J-type instructions
+jal:
+  type: J
+  opcode: "1101111"
